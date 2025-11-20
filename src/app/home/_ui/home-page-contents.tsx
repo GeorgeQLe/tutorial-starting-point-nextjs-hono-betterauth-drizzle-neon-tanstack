@@ -1,9 +1,8 @@
 "use client";
-import { useQuery } from "@tanstack/react-query";
-
-import { SignoutButton } from "@/components/auth/signout-button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { client } from "@/hono/client";
+import { SignoutButton } from "@/components/auth/signout-button";
+import { useQuery } from "@tanstack/react-query";
 
 export const HomePageContents = () => {
   const { data: demoData, isLoading, isError } = useQuery({
