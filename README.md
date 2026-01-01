@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# G Can Build - Tutorial Starter Template (Hono)
+
+Welcome to the G Can Build Tutorial starter template! This repository serves as the foundation for the YouTube tutorial series where we explore building and deploying modern web applications. Link to the YT Channel: https://www.youtube.com/@GeorgeLe
+
+## Tech Stack
+
+This project is built with a modern, production-ready tech stack:
+
+- **Framework**: [Next.js](https://nextjs.org/) with React
+- **API Layer**: [Hono.js](https://hono.dev/) for lightweight, fast APIs
+- **Database**: NeonDB (Serverless Postgres) with Drizzle ORM
+- **Authentication**: [Better Auth](https://www.better-auth.com/) with GitHub and Google OAuth providers
+- **State Management**: TanStack Query (React Query)
+- **Type Safety**: TypeScript
+- **UI Components**:
+  - Radix UI primitives
+  - Tailwind CSS for styling
+  - shadcn/ui component library
 
 ## Getting Started
 
-First, run the development server:
+1. Clone this repository:
+```bash
+git clone <your-repo-url>
+cd <repo-name>
+```
 
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Set up your environment variables:
+Create a `.env` file in the root directory with the following variables:
+```env
+DATABASE_URL=your_neon_db_connection_string
+GITHUB_CLIENT_ID=your_github_oauth_client_id
+GITHUB_CLIENT_SECRET=your_github_oauth_client_secret
+GOOGLE_CLIENT_ID=your_google_oauth_client_id
+GOOGLE_CLIENT_SECRET=your_google_oauth_client_secret
+```
+
+4. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── src/
+│   ├── app/               # Next.js app router (pages, layouts, API routes)
+│   ├── components/        # Reusable UI components
+│   │   ├── auth/         # Authentication components
+│   │   └── ui/           # shadcn/ui components
+│   ├── db/               # Database schema and connection
+│   ├── hooks/            # Custom React hooks
+│   ├── lib/              # Utility functions and configurations
+│   └── providers/        # React context providers
+├── drizzle/              # Database migrations and metadata
+└── package.json          # Project dependencies and scripts
+```
 
-## Learn More
+## YouTube Tutorials
 
-To learn more about Next.js, take a look at the following resources:
+This template is used in the G Can Build YouTube channel tutorials. Each tutorial builds upon this foundation to create various web applications while teaching modern web development concepts.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Follow along with our tutorials to learn:
+- Full-stack web development
+- Modern React patterns and best practices
+- Database design and management
+- Authentication and authorization
+- API development with Hono.js
+- Deployment and DevOps
+- And much more!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Key Features
 
-## Deploy on Vercel
+- **Modern React Development**: Next.js with React and Turbopack
+- **Lightweight APIs**: Fast, edge-ready APIs with Hono.js
+- **Database**: PostgreSQL with Drizzle ORM and migrations
+- **Authentication**: Better Auth with GitHub and Google OAuth
+- **UI Components**: Complete shadcn/ui component library with Radix UI
+- **Styling**: Tailwind CSS with responsive design
+- **State Management**: TanStack Query for server state
+- **Development Tools**: TypeScript, ESLint, and modern tooling configured
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Feel free to use this template for your own projects or contribute improvements. Issues and pull requests are welcome!
+
+## License
+
+This project is open source and available under the MIT license.
+
+---
+
+Built with love by G Can Build
